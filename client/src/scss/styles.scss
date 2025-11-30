@@ -1,0 +1,45 @@
+// 1) Override Bootstrap primarne boje — MORA BITI PRVO
+$primary: #3e5eaf;
+
+// 2) Uvezi Bootstrap SCSS
+@import "bootstrap/scss/bootstrap";
+
+// 3) Uvezi Bootstrap Icons
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+// 4) Google font
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap");
+
+/* GLOBAL FONT */
+body {
+  font-family: "Kanit", sans-serif;
+  background: white;
+}
+
+/* NARANČASTA IKONA */
+.nav-icon {
+  color: #f7a55c !important;
+  font-size: 1.4rem;
+}
+
+/* PORAVNANJE "Todo App" s headerom tablice */
+.nav-title {
+  height: 70px; /* ista visina kao header tablice */
+  display: flex;
+  align-items: center;
+}
+
+/* Header tablice */
+table thead th {
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+/* Modify cell cursor */
+.modify-cell {
+  cursor: pointer;
+}
+
+.nav-title {
+  margin-left: 6rem;
+}

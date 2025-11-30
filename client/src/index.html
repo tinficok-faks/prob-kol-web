@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+
+    <!-- Vite entry -->
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/script.js"></script>
+
+    <!-- Google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-4">
+      <span class="navbar-brand d-flex align-items-center nav-title">
+        <i class="bi bi-table nav-icon me-2"></i>
+        <span class="nav-text fw-bold">Todo App</span>
+      </span>
+    </nav>
+
+    <!-- TABLE SECTION -->
+    <main class="container mt-5">
+      <div class="table-responsive shadow-sm rounded bg-white p-3">
+        <table class="table table-hover align-middle">
+          <thead>
+            <tr>
+              <th class="fw-bold">Description</th>
+              <th>Date</th>
+              <th class="text-center">Completed</th>
+              <th class="text-center">Modify</th>
+            </tr>
+          </thead>
+          <tbody id="todo-tbody"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <form id="editTodoForm">
+              <input type="hidden" id="todoId" />
+
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  id="todoDescription"
+                  class="form-control"
+                  placeholder="Description"
+                />
+                <label for="todoDescription">Description</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input
+                  type="datetime-local"
+                  id="todoDate"
+                  class="form-control"
+                />
+                <label for="todoDate">Date & Time</label>
+              </div>
+
+              <div class="form-check mb-3">
+                <input type="checkbox" id="todoCompleted" class="form-check-input" />
+                <label class="form-check-label" for="todoCompleted">
+                  Completed
+                </label>
+              </div>
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" onclick="hide()">
+              Close
+            </button>
+            <button type="button" class="btn btn-primary" onclick="submit()">
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
