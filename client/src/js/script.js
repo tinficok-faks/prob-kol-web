@@ -13,6 +13,9 @@ window.jQuery = $;
 
 // ------- Helper funkcije -------
 
+fetch("/api/todos")
+
+
 // zadana prettyDate funkcija iz zadatka
 const prettyDate = (dateStr) => {
   const formatter = new Intl.DateTimeFormat("en-US", {
