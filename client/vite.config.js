@@ -9,6 +9,6 @@ export default {
         port: 8080
     },
     proxy: {
-        "/api": "htpp://localhost:8080"
+        "/api": "http://localhost:3000"
     }
 }
